@@ -1,24 +1,40 @@
 export default function App() {
-  return <Cdac></Cdac>;
-}
-
-// HTML :pre defined TAGS
-// REACT : user defined TAGS=>COMPONENT
-{
-  /* <div></div>
-<cdac></cdac> */
-}
-
-function Cdac() {
+  let list = [1, 1, 2, 3, 4,5,6,7];
   return (
-    <div>
-      <h1>Hello world</h1>
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-        consequuntur dignissimos numquam velit quas perferendis molestiae
-        nesciunt quidem impedit temporibus ducimus exercitationem est distinctio
-        nostrum voluptatibus, vitae possimus odio illum sit placeat minima
-        doloremque veniam error deserunt! Tenetur, eum unde?
+    <div className="container-fluid ">
+      <Header />
+      <div className="row">
+        {list.map(() => (
+          <div className="col-sm-6 col-lg-3">
+            <Mycard />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function Header() {
+  return (
+    <div className="row bg-dark sticky-top text-light p-2 mb-1">
+      <div className="col">React App</div>
+    </div>
+  );
+}
+
+export function Mycard() {
+  let cardTitle = "Card Title";
+  return (
+    <div className="card my-2">
+      <div className="card-header bg-info">{cardTitle}</div>
+      <div className="card-body mx-1">
+        {" "}
+        <img className="my-2" src="https://picsum.photos/200" alt="" />
+        <input
+          className="bg-primary-1 btn-sm bg-primary p-2 w-100"
+          type="button"
+          value="BUY NOW"
+        />
       </div>
     </div>
   );
