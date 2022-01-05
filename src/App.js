@@ -9,10 +9,10 @@ export default function App() {
 <cdac></cdac> */
 }
 
-export function Cdac() {
+function Cdac() {
   return (
     <div>
-      <h1>Hello Cdac</h1>
+      <h1>Hello world</h1>
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
         consequuntur dignissimos numquam velit quas perferendis molestiae
